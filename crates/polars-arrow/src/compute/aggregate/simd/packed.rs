@@ -24,3 +24,4 @@ simd_sum!(i8x64, i8, reduce_sum);
 simd_sum!(i16x32, i16, reduce_sum);
 simd_sum!(i32x16, i32, reduce_sum);
 simd_sum!(i64x8, i64, reduce_sum);
+simd_sum!(months_days_nsx8, months_days_ns, reduce_sum);

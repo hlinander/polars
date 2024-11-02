@@ -16,6 +16,7 @@ macro_rules! with_match_primitive_type {(
         Int128 => __with_ty__! { i128 },
         Float32 => __with_ty__! { f32 },
         Float64 => __with_ty__! { f64 },
+        MonthDayNano => {{ use $crate::types::months_days_ns; __with_ty__! { months_days_ns } }},
         _ => panic!("operator does not support primitive `{:?}`",
             $key_type)
     }
@@ -41,6 +42,7 @@ macro_rules! with_match_primitive_type_full {(
         Float16 => __with_ty__! { f16 },
         Float32 => __with_ty__! { f32 },
         Float64 => __with_ty__! { f64 },
+        MonthDayNano => {{ use $crate::types::months_days_ns; __with_ty__! { months_days_ns } }},
         _ => panic!("operator does not support primitive `{:?}`",
             $key_type)
     }

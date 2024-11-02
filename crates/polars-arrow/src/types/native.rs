@@ -232,6 +232,25 @@ impl NativeType for days_ms {
 #[allow(non_camel_case_types)]
 #[repr(C)]
 pub struct months_days_ns(pub i32, pub i32, pub i64);
+impl std::ops::Add for months_days_ns {
+    type Output = Self;
+
+    fn add(self, rhs: Self) -> Self::Output {
+        todo!()
+    }
+}
+impl std::ops::AddAssign for months_days_ns {
+    fn add_assign(&mut self, rhs: Self) {
+        todo!()
+    }
+}
+impl std::iter::Sum for months_days_ns {
+    fn sum<I: Iterator<Item = Self>>(iter: I) -> Self {
+        todo!()
+    }
+}
+
+polars_utils::impl_to_total_ord_identity!(months_days_ns);
 
 impl IsNull for months_days_ns {
     const HAS_NULLS: bool = false;

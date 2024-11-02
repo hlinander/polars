@@ -480,6 +480,7 @@ pub trait ToTotalOrd {
     fn peel_total_ord(ord_item: Self::TotalOrdItem) -> Self::SourceItem;
 }
 
+#[macro_export]
 macro_rules! impl_to_total_ord_identity {
     ($T: ty) => {
         impl ToTotalOrd for $T {
